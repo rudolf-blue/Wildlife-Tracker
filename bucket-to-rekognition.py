@@ -38,7 +38,7 @@ def lambda_handler(event, context):
                 json_data = json.dumps(data_to_save)
                 s3_client.put_object(
                     Body=json_data.encode('utf-8'),
-                    Bucket='processing-squirrel-results',
+                    Bucket='---',
                     Key=key + '.json'
                 )
 
