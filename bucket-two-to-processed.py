@@ -25,8 +25,8 @@ def lambda_handler(event, context):
 
         data_to_append = f"{temp_string}{lat}\t{lon}\n"
 
-        processed_bucket = "processing-processed"
-        text_file_key = "wildLocations.txt"
+        processed_bucket = "---"
+        text_file_key = "---.txt"
 
         try:
             existing_data = s3_client.get_object(Bucket=processed_bucket, Key=text_file_key)['Body'].read().decode('utf-8')
